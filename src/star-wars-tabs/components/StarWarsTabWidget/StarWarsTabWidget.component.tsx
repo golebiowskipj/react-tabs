@@ -4,6 +4,9 @@ import { PanesWrapper, TabContentWrapper, TabsPane } from 'ui-kit'
 import { useFilmsModel } from '../../models/Films/Films.service'
 import { usePeopleModel } from '../../models/People/People.service'
 import { usePlanetsModel } from '../../models/Planets/Planets.service'
+import { FilmsList } from '../FilmsList/FilmsList.component'
+import { PeopleList } from '../PeopleList/PeopleList.component'
+import { PlanetsList } from '../PlanetsList/PlanetsList.component'
 
 type StarWarsTabPanes = 'films' | 'people' | 'planets'
 
@@ -15,6 +18,7 @@ export const StarWarsTabWidget = () => {
   const { films } = useFilmsModel()
   const { people } = usePeopleModel()
   const { planets } = usePlanetsModel()
+
   return (
     <>
       <PanesWrapper>
@@ -51,9 +55,9 @@ export const StarWarsTabWidget = () => {
       </PanesWrapper>
       <TabContentWrapper>
         <Routes>
-          <Route path='films' element={<div>films</div>} />
-          <Route path='planets' element={<div>planets</div>} />
-          <Route path='people' element={<div>people</div>} />
+          <Route path='films' element={<FilmsList />} />
+          <Route path='planets' element={<PlanetsList />} />
+          <Route path='people' element={<PeopleList />} />
           <Route index element={<Navigate to='films' />} />
           <Route path='*' element={<Navigate to='films' />} />
         </Routes>
