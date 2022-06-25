@@ -4,3 +4,8 @@ export type {
   SwapiPeopleResponse,
   SwapiPlanetsResponse,
 } from './StarWars/StarWars.service'
+export {
+  filmsHandler,
+  peopleHandler,
+  planetsHandler,
+} from './StarWars/StarWars.mocks'
