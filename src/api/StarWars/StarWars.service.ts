@@ -6,7 +6,7 @@ const { get } = apiConnector(SWAPI_BASE_URL)
 
 interface SwapiResponse<ResultsType> {
   count: number
-  results: ResultsType
+  results: ResultsType[]
 }
 
 interface SwapiPeopleResults {
@@ -21,15 +21,19 @@ interface SwapiFilmsResults {
   title: string
 }
 
+export type SwapiFilmsResponse = SwapiResponse<SwapiFilmsResults>
+export type SwapiPeopleResponse = SwapiResponse<SwapiPeopleResults>
+export type SwapiPlanetsResponse = SwapiResponse<SwapiPlanetsResults>
+
 export const starWarsApi = () => {
   const getPeople = () => {
-    return get<SwapiResponse<SwapiPeopleResults>>({ url: 'people' })
+    return get<SwapiPeopleResponse>({ url: 'people' })
   }
   const getPlanets = () => {
-    return get<SwapiResponse<SwapiPlanetsResults>>({ url: 'planets' })
+    return get<SwapiPlanetsResponse>({ url: 'planets' })
   }
   const getFilms = () => {
-    return get<SwapiResponse<SwapiFilmsResults>>({ url: 'films' })
+    return get<SwapiFilmsResponse>({ url: 'films' })
   }
 
   return { getPeople, getPlanets, getFilms }
