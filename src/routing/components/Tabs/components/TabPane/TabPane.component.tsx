@@ -8,6 +8,7 @@ interface TabPaneProps<UrlType> {
 
 export const TabPane = <UrlType,>(props: TabPaneProps<UrlType>) => {
   const { tabUrl, renderTabPane } = props
+
   return (
     <NavLink to={tabUrl}>
       {({ isActive }) => renderTabPane({ isActive })}

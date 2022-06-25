@@ -15,3 +15,11 @@ export const buttonText = css`
   line-height: 1;
   color: ${({ theme }) => theme.color.primary};
 `
+
+export const tabText = css`
+  font-family: ${({ theme }) => theme.fontFamily.primary};
+  font-weight: normal;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: ${({ theme }) => theme.color.primary};
+`

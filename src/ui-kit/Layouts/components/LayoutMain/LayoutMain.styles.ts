@@ -12,6 +12,7 @@ export const LayoutMain = styled.main`
 `
 
 export const NavMain = styled.nav`
+  z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
