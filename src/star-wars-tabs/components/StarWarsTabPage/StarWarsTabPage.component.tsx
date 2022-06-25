@@ -13,7 +13,8 @@ export const StarWarsTabPage = () => {
 
   if (isLoading) return <div>loading</div>
   if (isError) {
-    console.error(errorFilms || errorPeople || errorPlanets)
+    // TODO: implement proper logger
+    // console.error(errorFilms || errorPeople || errorPlanets)
     return <div>Something went wrong</div>
   }
 
