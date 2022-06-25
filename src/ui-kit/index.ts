@@ -8,3 +8,4 @@ export {
 export * as Typography from './Typography/Typography.styles'
 export { TabsPane } from './Tabs/components/TabsPane/TabsPane.component'
 export { PanesWrapper, TabContentWrapper } from './Tabs/Tabs.styles'
+export { ListText } from './ListText/ListText.component'
