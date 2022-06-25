@@ -4,9 +4,9 @@ import { usePeopleModel } from '../../models/People/People.service'
 import { usePlanetsModel } from '../../models/Planets/Planets.service'
 
 export const StarWarsTabPage = () => {
-  const { isLoadingFilms, isErrorFilms, errorFilms } = useFilmsModel()
-  const { isLoadingPeople, isErrorPeople, errorPeople } = usePeopleModel()
-  const { isLoadingPlanets, isErrorPlanets, errorPlanets } = usePlanetsModel()
+  const { isLoadingFilms, isErrorFilms } = useFilmsModel()
+  const { isLoadingPeople, isErrorPeople } = usePeopleModel()
+  const { isLoadingPlanets, isErrorPlanets } = usePlanetsModel()
 
   const isLoading = isLoadingFilms || isLoadingPeople || isLoadingPlanets
   const isError = isErrorFilms || isErrorPeople || isErrorPlanets
