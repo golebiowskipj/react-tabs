@@ -1,5 +1,3 @@
-# Birchal interview task
-
 ## Live version of the project
 
 Project is available at this [LINK](https://vocal-truffle-524fe2.netlify.app/)
